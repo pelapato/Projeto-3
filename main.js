@@ -1,4 +1,6 @@
-
+console.log('Projeto  😃')
+console.log('Mostrando que o console fuciona')
+console.log('Console realmente muito produtivo')
 // TODOS CARACTERES
 const coluna1=document.querySelectorAll('.c1')
 const coluna2=[...document.querySelectorAll('.c2')]
