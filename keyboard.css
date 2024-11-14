@@ -1,0 +1,179 @@
+/*font do gloogle fonts-poppins*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/*variaveis css*/
+:root{
+  --color-background-keyboard-1:#15181b;
+  --color-background-keyboard-text:#EEEBEB;
+  --color-background-keyboard-button:#25272e;
+  --color-background-keyboard-feramentas:#B5B5B5;
+  --color-background-keyboard-search:#3A4B5D;
+}
+*{
+  margin:0; 
+  padding:0;
+}
+body{
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  height:100vh;
+  background:var(--color-background-keyboard-button);
+  font-family: "Poppins",sans-serif;
+}
+#saida-de-texto{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+}
+h3{
+  color:white;
+}
+p#criador{
+  font-family:"poppins",sans-serif;
+  font-size:14px;
+  font-weight:500;
+  color:var(--color-background-keyboard-feramentas);
+  margin:10px 0px 0px 20px;
+  opacity:.5;
+}
+#destaque{
+  display:inline-block;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  -webkit-background-clip: text;
+  background-image:linear-gradient(to left,rgb(9, 255, 0),rgb(30, 255, 0),rgb(0, 255, 0));
+}
+section#teclado{
+  position:fixed;
+  bottom:0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-direction:column;
+  width:100%;
+  height:300px;
+  background:var(--color-background-keyboard-1);  
+  border-radius:20px 20px 0px 0px;
+}
+@media(max-width:500px){
+  section#teclado{
+    height:300px;
+  }
+}
+div#todos-os-botoes{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  width:100%;
+  margin-bottom:10px;
+  overflow:hidden;
+}
+#ferramentas{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  height:60px;
+}
+#ferramentas > #background-mic{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:38px;
+  height:38px;
+  background:var(--color-background-keyboard-search);
+  border-radius:50%;
+}
+#ferramentas > #background-mic> img{
+  width:15px;
+}
+@media(max-width:500px){
+  #ferramentas > #background-mic{
+    width:33px;
+    height:33px;
+  }
+  #ferramentas > #background-mic> img{
+    width:13px;
+  }
+}
+div#coluna-1,#coluna-2,#coluna-3,#coluna-4{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:row;
+  width:100%;
+  gap:5px;
+  margin:3px;
+}
+button{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:47px;
+  height:50px;
+  background:var(--color-background-keyboard-button);
+  border:none;
+  padding:0px 9px;
+  border-radius:7px;
+  color:var(--color-background-keyboard-feramentas);
+  font-size:16px;
+}
+@media(max-width:500px){
+  button{
+    width:35px;
+    height:48px;
+  }
+}
+button:hover{
+  background:var(--color-background-keyboard-text);
+  color:var(--color-background-keyboard-button);
+  transition:.1s;
+}
+#numero{
+  width:60px;
+  border-radius:5px;
+}
+#gmail{
+  margin:0px 0px 0px 5px;
+}
+#space{
+  width:180px;
+  margin:0px 15px;
+}
+#tab  > img{
+  width:20px;
+}
+#delete{
+  margin:0px 5px;
+}
+#delete > img{
+  width:23px;
+}
+#search{
+  width:80px;
+  background:var(--color-background-keyboard-search);
+  border-radius:8px;
+}
+#search > img{
+  width:16px;
+}
+#estado-keyboard{
+  position:fixed;
+  top:35%;
+  left:50px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:50px;
+  height:50px;
+  background:var(--color-background-keyboard-search);
+  border-radius:50%;
+}
+#estado-keyboard > img{
+  width:20px;
+}
