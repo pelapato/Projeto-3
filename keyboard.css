@@ -47,11 +47,16 @@ body{
     opacity:1;
   }
 }
+#saida-de-texto-aqui{
+  display:block;
+  text-align:justify;
+  color:var(--color-background-keyboard-text);
+}
 p#criador{
   font-family:"poppins",sans-serif;
   font-size:14px;
   font-weight:500;
-  color:var(--color-background-keyboard-feramentas);
+  color:#e7e7e7;
   margin:10px 0px 0px 20px;
   opacity:.5;
 }
@@ -60,7 +65,8 @@ p#criador{
   -webkit-text-fill-color:transparent;
   background-clip:text;
   -webkit-background-clip: text;
-  background-image:linear-gradient(to left,rgb(9, 255, 0),rgb(30, 255, 0),rgb(0, 255, 0));
+  background-image:linear-gradient(205deg,#405DE6,#833AB4,
+  #C13584,#FEDA77,#F58529);
 }
 section#teclado{
   position:fixed;
@@ -157,6 +163,10 @@ button:hover{
   width:60px;
   border-radius:5px;
 }
+.numero_ativo{
+  background:white;
+  color:black;
+}
 #gmail{
   margin:0px 0px 0px 5px;
 }
@@ -168,7 +178,8 @@ button:hover{
   width:20px;
 }
 .upper_ativo{
-  background:rgb(5, 57, 136);
+  background:white;
+  color:black;
 }
 #delete{
   margin:0px 5px;
