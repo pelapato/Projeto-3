@@ -28,9 +28,24 @@ body{
   align-items:center;
   justify-content:center;
   width:100%;
+  margin-top:20px;
+  color:var(--color-background-keyboard-text);
 }
-h3{
-  color:white;
+#saida-de-texto::after{
+  animation:line_animation .7s infinite ease-in-out;
+  display:block;
+  content:"";
+  width:0px;
+  height:14px;
+  border:solid .1px var(--color-background-keyboard-feramentas);
+}
+@keyframes line_animation{
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
 }
 p#criador{
   font-family:"poppins",sans-serif;
@@ -58,6 +73,7 @@ section#teclado{
   height:300px;
   background:var(--color-background-keyboard-1);  
   border-radius:20px 20px 0px 0px;
+  transition:4s;
 }
 @media(max-width:500px){
   section#teclado{
@@ -123,9 +139,12 @@ button{
   color:var(--color-background-keyboard-feramentas);
   font-size:16px;
 }
+.btn_upper{
+  text-transform:uppercase !important;
+}
 @media(max-width:500px){
   button{
-    width:35px;
+    width:32px;
     height:48px;
   }
 }
@@ -145,8 +164,11 @@ button:hover{
   width:180px;
   margin:0px 15px;
 }
-#tab  > img{
+#upper  > img{
   width:20px;
+}
+.upper_ativo{
+  background:rgb(5, 57, 136);
 }
 #delete{
   margin:0px 5px;
@@ -176,4 +198,38 @@ button:hover{
 }
 #estado-keyboard > img{
   width:20px;
+}
+@media(max-width:500px){
+  #estado-keyboard{
+    width:45px;
+    height:45px;
+    top:38%;
+    left:30px;
+  }
+  #estado-keyboard > img{
+    width:17px;
+  }
+  /*Buttoes especiais*/
+  #numero{
+    width:50px;
+  }
+  #space{
+    width:130px;
+    margin:0px 3px;
+  }
+  #search{
+    width:40px;
+  }
+}
+
+.tecladoAtivo{
+  animation:tecladotoggle 2s forwards;
+}
+@keyframes tecladotoggle{
+  0%{
+    bottom:0;
+  }
+  100%{
+    top:-500px;
+  }
 }

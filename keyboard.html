@@ -15,7 +15,6 @@
   <main>
     <p id="criador"><strong id="destaque"><a href="instagram.com/@atilon.dev40">@atilon.dev40</a></strong> - keyboard</p>
     <article id="saida-de-texto">
-      <h3>escreva algo:</h3>
       <output id="saida-de-texto-aqui"></output>
     </article>
     <section id="teclado">
@@ -65,14 +64,14 @@
           <button id="numero">123</button>
           <button id="gmail">@</button>
           <button id="space">space</button>
-          <button id="tab"><img src="src/images/shift-svgrepo-com.svg" alt="tab"></button>
+          <button id="upper"><img src="src/images/shift-svgrepo-com.svg" alt="upper"></button>
           <button id="delete"><img src="src/images/delete-svgrepo-com.svg" alt="delete"></button>
           <button id="search"><img src="src/images/search-svgrepo-com.svg" alt="search"></button>
         </div>
       </div>
     </section>
     <!--button do icone de ativacao do keyboard-->
-    <div id="estado-keyboard">
+    <div id="estado-keyboard" onclick="estadoTeclado()">
       <img src="src/images/keyboard-open-svgrepo-com.svg" alt="mostrar keyboard">
     </div>
   </main>
