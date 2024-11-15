@@ -108,8 +108,24 @@ const entrada=()=>{
 entrada()
 
 
+const recognition = createRecognetion()
+
+
+
 function createRecognetion(){
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecogtion
-    const recognition = SpeechRecognition != undefined 
+    const recognition = SpeechRecognition != undefined ? new SpeechRecognition() : null
+
+    if(!recognition){
+        texto.innerHTML =" esse browser nao suporta gravador de audio @atilon.dev40"
+        return null
+    }
+
+    recognition.lang="pt_BR"
+    recognition.onstart=()=>{console.log("inicado a grava/ao")}
+    recognition.onend=()=>{console.log("terminou de gravar")}
+    recognition.onerror=()=>{console.log("ocorreru um error tente novamnete!")}
+    recognition.onresult=(e)=>{texto.innerHTML=e.results[0][0].transcript}
+
+    return recognition
 }
-createRecognetion()
