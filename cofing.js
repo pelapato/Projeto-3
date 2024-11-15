@@ -6,6 +6,8 @@ const teclado = document.querySelector("#teclado")
 //saida de texto - output
 const texto=document.querySelector("#saida-de-texto-aqui")
 
+
+const mic = document.querySelector("#background-mic")
 //Os butoes que sao letras
 const botao = [...document.querySelectorAll("button:not(#upper):not(#search):not(#numero):not(#space):not(#delete)")]
 
@@ -109,7 +111,11 @@ entrada()
 
 
 const recognition = createRecognetion()
+var listen = false
 
+mic.addEventListener("click",()=>{
+    listen ? recognition.stop() : recognition.start()
+})
 
 
 function createRecognetion(){
@@ -122,8 +128,9 @@ function createRecognetion(){
     }
 
     recognition.lang="pt_BR"
-    recognition.onstart=()=>{console.log("inicado a grava/ao")}
-    recognition.onend=()=>{console.log("terminou de gravar")}
+
+    recognition.onstart=()=>{listen=true console.log()}
+    recognition.onend=()=>{listen=false}
     recognition.onerror=()=>{console.log("ocorreru um error tente novamnete!")}
     recognition.onresult=(e)=>{texto.innerHTML=e.results[0][0].transcript}
 
